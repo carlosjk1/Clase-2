@@ -228,5 +228,87 @@
 			</ul>
 		</div>
 	</section>
+	<section>
+		<table>
+			<tr>
+				<td>Países</td>
+				<td>Bronce</td>
+				<td>Plata</td>
+				<td>Oro</td>
+			</tr>
+			<tr>
+				<td>Argentina</td>
+				<td>5</td>
+				<td>6</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>Brasil</td>
+				<td>10</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>Uruguay</td>
+				<td>9</td>
+				<td>2</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>Venezuela</td>
+				<td>0</td>
+				<td>5</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>USA</td>
+				<td>30</td>
+				<td>70</td>
+				<td>120</td>
+			</tr>
+		</table>
+	</section>
+	<hr/> <!-- genera una linea entre ambas sections -->
+	<section>
+		<form method="post" action="enviar.php">
+			<label for="nombre">Nombre:</label>
+			<input name="nombre" placeholder="Ingresá tu nombre" type="text" required>
+				<!-- el atributo "type" se puede llenar con un generico como text, pero si uso uno mas especifico me da accesibilidad y sino se ingresa un mail y es requerido, el sitio pide la forma de email -->
+			<br/>
+			<label for="correo">Email:</label>
+			<input type="email" name="correo" placeholder="Ingresa tu correo" required>
+			<br/>
+
+			<label for="password">Contraseña</label>
+			<input type="password" name="password" placeholder="Ingresá contraseña" required>
+			<br/>
+			<label for="telefono">Telefono</label>
+			<input type="tel" name="telefono" placeholder="Ingrese su Telefono">
+			<br/>
+			<label for="edad">Edad</label>
+			<input type="number" name="edad" placeholder="Ingrese su edad">
+			<br/>
+			<label for="comentarios">Recomendaciones</label>
+			<textarea name="comentarios" placeholder="Escribe aquí tus comentarios"></textarea>
+			<br/>
+			<label for="destino">Destino</label>
+			<select name="destino" required>
+				<option value="">Seleccionar Destino</option>
+				<option value="CABA">Ciudad Autonoma de Buenos Aires</option>
+				<option value="RGL">Rio Gallegos</option>
+				<option value="CBA">Cordoba Capital</option>
+				<option value="ER">Entre Rios</option>
+			</select>
+			<br/>
+			<label for="entrega">Metodo de entrega</label>
+			<input name="entrega" type="radio" value="Delivery"><span>Delivery</span>
+			<input name="entrega" type="radio" value="Local"><span>Retira por el Local</span>
+			<br/>
+			<label for="cv">Adjuntar Archivo</label>
+			<input type="file" name="cv">
+			<br/>
+			<input type="submit" value="Enviar Formulario">
+		</form>
+	</section>
 </body>
 </html>
